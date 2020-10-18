@@ -47,12 +47,12 @@ int main()
 //	Write a C++ program which solves the above problem on a uniform grid
 //of spacing h = 0.1
 
-	fs << "x" << ", " << "fwd" << ", " << "fwd error" << ", " << "back" << ", " << "back error" << ", " << "center" <<
+	fs << "x" << ", " << "fwd" << ", " << "fwd error" << " ," << "center" <<
 		", " << "center error" << ", " << "f'(x)" << " ," << "dx" << endl;
 
-  for (int j = 0; j < 1; j++)
+  for (int j = 0; j < 5; j++)
 	{
-         cout << j;
+        cout << j;
           
 
 
@@ -69,11 +69,11 @@ int main()
 		   " f'x: " << f_prime_x(x) << " step size :" << delta_x << endl;*/
 
 
-		 cout << "x = " << x <<" \t fwd error: " << f_error /*<< "\t bwd error: " << b_error */ << "\t center scheme: " << c_error << "\t f'x: " << f_prime_x(x) << "\t step size :" << delta_x << endl;
+		 //cout << "x = " << x <<" \t fwd error: " << f_error /*<< "\t bwd error: " << b_error */ << "\t center scheme: " << c_error << "\t f'x: " << f_prime_x(x) << "\t step size :" << delta_x << endl;
 
 
 
-			 fs << x << ", " << fwd(x, delta_x) << ", " << f_error << ", " /*<< back(x, delta_x) << ", " << b_error */<< ", " << center(x, delta_x) <<
+			 fs << x << ", " << fwd(x, delta_x) << ", " << f_error << ", " << center(x, delta_x) <<
 				 ", " << c_error << ", " << f_prime_x(x) << " ," << delta_x << endl;
 
 
@@ -89,31 +89,34 @@ int main()
 		{
 			cout <<  center_error[i];
 		}*/
-		 cout << "FORWARD:" << " l2 is " << l2_er/(1/delta_x) << endl;
-		 cout << "CENTRE:" << " l2 is " << l2_cnt / (1 / delta_x) << endl;
-
-		 for (int i = 0; i < forward_error.size(); i++) {
-			 if (abs(forward_error[i]) > li_fw) {
-				 li_fw = forward_error[i];
+		// cout << "FORWARD:" << " l2 is " << l2_er/(1/delta_x) << endl;
+		
+		// cout << "CENTRE:" << " l2 is " << l2_cnt / (1 / delta_x) << endl;
+		 
+			 for (int i = 0; i < forward_error.size(); i++) {
+				 if (abs(forward_error[i]) > li_fw) {
+					 li_fw = forward_error[i];
+				 }
+				 else {
+					 continue;
+				 }
 			 }
-			 else {
-				 continue;
-			 }
-		 }
 
-		 std::cout << "L infinite for forward diff: " << li_fw << "\n";
-
-		 for (int i = 0; i < center_error.size(); i++) {
-			 if (abs(center_error[i]) > li_fw) {
-				 li_cnt = center_error[i];
+		// std::cout << "L infinite for forward diff: " << li_fw << "\n";
+			 for (int i = 0; i < center_error.size(); i++) {
+				 if (abs(center_error[i]) > li_fw) {
+					 li_cnt = center_error[i];
+				 }
+				 else {
+					 continue;
+				 }
 			 }
-			 else {
-				 continue;
-			 }
-		 }
-		 std::cout << "L infinite for forward diff: " << li_cnt << "\n";
 
-		cout << "center error :" << accumulate(center_error.begin(), center_error.end(), 0.0) << endl << /*<< "back error :" << accumulate(backward_error.begin(), backward_error.end(), 0.0)*/ "forward error :" << accumulate(forward_error.begin(), forward_error.end(), 0.0) <<  endl;
+		 fs << "For centre: ,l2 , l0\n" << "," << l2_cnt / (1 / delta_x) << "," << li_cnt << endl;
+		 fs << "For forward: ,l2 , l0\n" << "," << l2_er / (1 / delta_x) << "," << li_fw << endl;
+		// std::cout << "L infinite for forward diff: " << li_cnt << "\n";
+
+		//cout << "center error :" << accumulate(center_error.begin(), center_error.end(), 0.0) << endl << /*<< "back error :" << accumulate(backward_error.begin(), backward_error.end(), 0.0)*/ "forward error :" << accumulate(forward_error.begin(), forward_error.end(), 0.0) <<  endl;
 	x=0;
 	delta_x*=0.1; //decreases delta x
 	
