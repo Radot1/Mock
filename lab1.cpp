@@ -5,6 +5,8 @@
 #include <string>
 #include <vector>
 #include <numeric>
+#include <algorithm>
+
 using namespace std;
 vector<double> center_error;
 vector<double> forward_error;
@@ -29,7 +31,7 @@ int main()
 
 	cout << setprecision(10);
 	
-	double x =0 ;
+	double x =0.0 ;
 	//double h = 1;
 	double delta_x = 0.1;
 	double c_error;
@@ -59,8 +61,6 @@ int main()
 		 do
 		 {
 
-			 
-
 			 c_error = center(x, delta_x) - f_prime_x(x);
 			 f_error = fwd(x, delta_x) - f_prime_x(x);
 			// b_error = back(x, delta_x) - f_prime_x(x);
@@ -83,8 +83,10 @@ int main()
 			l2_cnt += pow(abs(c_error), 2);
 
 			 x += delta_x;
-		 } while (x < 1 + delta_x);
-			
+		 } while (x < 1 + (delta_x / 2));
+
+		 l2_er = sqrt(l2_er);
+		 l2_cnt = sqrt(l2_cnt);
 		/*for (size_t i = 0; i < center_error.size(); i++)
 		{
 			cout <<  center_error[i];
@@ -93,7 +95,7 @@ int main()
 		
 		// cout << "CENTRE:" << " l2 is " << l2_cnt / (1 / delta_x) << endl;
 		 
-			 for (int i = 0; i < forward_error.size(); i++) {
+			/* for (int i = 0; i < forward_error.size(); i++) {
 				 if (abs(forward_error[i]) > li_fw) {
 					 li_fw = forward_error[i];
 				 }
@@ -101,24 +103,31 @@ int main()
 					 continue;
 				 }
 			 }
-
+			 */
+			 li_fw = *max_element(forward_error.begin(), forward_error.end());
+			 li_cnt = *max_element(center_error.begin(), center_error.end());
 		// std::cout << "L infinite for forward diff: " << li_fw << "\n";
-			 for (int i = 0; i < center_error.size(); i++) {
-				 if (abs(center_error[i]) > li_fw) {
+			 /*for (int i = 0; i < center_error.size(); i++) {
+				 if (abs(center_error[i]) > li_cnt) {
 					 li_cnt = center_error[i];
 				 }
 				 else {
 					 continue;
 				 }
 			 }
-
+			 */
 		 fs << "For centre: ,l2 , l0\n" << "," << l2_cnt / (1 / delta_x) << "," << li_cnt << endl;
 		 fs << "For forward: ,l2 , l0\n" << "," << l2_er / (1 / delta_x) << "," << li_fw << endl;
 		// std::cout << "L infinite for forward diff: " << li_cnt << "\n";
 
 		//cout << "center error :" << accumulate(center_error.begin(), center_error.end(), 0.0) << endl << /*<< "back error :" << accumulate(backward_error.begin(), backward_error.end(), 0.0)*/ "forward error :" << accumulate(forward_error.begin(), forward_error.end(), 0.0) <<  endl;
-	x=0;
-	delta_x*=0.1; //decreases delta x
+		 
+			center_error.clear(); //clear all values form vectors
+			forward_error.clear();
+			l2_cnt = 0;
+			l2_er = 0;
+			x=0;
+			delta_x*=0.1; //decreases delta x
 	
 	}
 
