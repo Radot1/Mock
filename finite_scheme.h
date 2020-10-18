@@ -20,6 +20,7 @@ class finite_scheme
 
 
 public:
+	finite_scheme(double delta_x);
 	finite_scheme();
 	virtual ~finite_scheme();
 	double get_lmax();
@@ -48,9 +49,22 @@ class forward_scheme : public finite_scheme{
 	string name = "forward Scheme";
 
 	public:
-		forward_scheme();
+		forward_scheme(double delta_x);
 		virtual string get_name() { return this->name; };
 		
+
+protected:
+	virtual double scheme_function(double x, double delta_x);
+
+};
+class center_scheme : public finite_scheme {
+
+	string name = "center Scheme";
+
+public:
+	center_scheme(double delta_x);
+	virtual string get_name() { return this->name; };
+
 
 protected:
 	virtual double scheme_function(double x, double delta_x);
