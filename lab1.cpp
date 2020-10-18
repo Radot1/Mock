@@ -81,14 +81,16 @@ int main()
 
 	//	 finite_scheme fd = finite_scheme(forward_error);
 		 finite_scheme cnt = finite_scheme();
+		 forward_scheme fd = forward_scheme();
 	//	 finite_scheme bd = finite_scheme(backward_error);
 		 
 
 	//	 cout << "finite_Scheme class lmax calc. forward = " << fd.get_lmax() << endl;
 		 cout << "finite_Scheme class lmax calc. cnt = " << cnt.get_lmax() << endl;
+		 cout << "forward scheme class lmax calc. cnt = " << fd.get_lmax() << endl;
 	//	 cout << "finite_Scheme class lmax calc. bd = " << bd.get_lmax() << endl;
 	//	 cout << "finite_Scheme class l2 calc. forward = " << fd.get_l2() / (1 / delta_x )<< endl;
-		 cout << "finite_Scheme class l2 calc. cnt = " << cnt.get_l2() / (1 / delta_x) << endl;
+		 cout << "finite_Scheme class l2 calc. cnt = " << fd.get_l2() / (1 / delta_x) << endl;
 		 //	 cout << "finite_Scheme class lmax calc. bd = " << bd.get_lmax() << endl;
 		 
 

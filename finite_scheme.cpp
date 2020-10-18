@@ -4,10 +4,12 @@
 
 finite_scheme::finite_scheme()
 {
-	in = scheme();
-	lmax = calc_lmax(in);
-	l2 = calc_l2(in);
+
 }
+
+
+
+
 
 finite_scheme::~finite_scheme()
 {
@@ -52,8 +54,8 @@ double finite_scheme::calc_l2(vector<double> in)
 	for (double x : in) {
 		sum += x * x;
 	}
-	//return sqrt(sum);  // check whether to extend square root sum. 
-	return sum;
+	return sqrt(sum);  // check whether to extend square root sum. 
+	//return sum;
 }
 
 double finite_scheme::f(double x){ return 3 * pow(x, 3) + 2 * x + 1; }
@@ -61,7 +63,7 @@ double finite_scheme::f(double x){ return 3 * pow(x, 3) + 2 * x + 1; }
 vector<double> finite_scheme::scheme()
 {
 
-	cout << "\n scheme loop";
+	cout << "\n scheme loop for  " << this->get_name()<<  endl;
 
 	do
 	{
@@ -76,3 +78,16 @@ vector<double> finite_scheme::scheme()
 }
 
 double finite_scheme::scheme_function(double x, double delta_x) { return ((f(x + delta_x) - f(x - delta_x)) / delta_x) * 0.5; };
+
+forward_scheme::forward_scheme()
+{
+	in = this->scheme();
+	lmax = this->calc_lmax(in);
+	l2 = this->calc_l2(in);
+
+
+}
+
+double forward_scheme::scheme_function(double x, double delta_x){ return (f(x + delta_x) - f(x)) / delta_x; }
+
+
