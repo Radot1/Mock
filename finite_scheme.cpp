@@ -79,6 +79,7 @@ vector<double> finite_scheme::scheme()
 	do
 	{
 		discreet_value = scheme_function(x, delta_x);
+		discreet_values.push_back(discreet_value);
 		error = discreet_value - f_prime_x(x);
 		error_v.push_back(error);
 		cout << "x=" << x << "delta_x =" << delta_x << "f_prime_x =" << f_prime_x(x) << "error = " << error << "discreet value =" << discreet_value << endl;

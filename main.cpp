@@ -7,9 +7,7 @@
 #include <numeric>
 #include "finite_scheme.h"
 using namespace std;
-vector<double> center_error;
-vector<double> forward_error;
-vector<double> backward_error;
+
 
 
 
