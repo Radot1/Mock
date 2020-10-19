@@ -10,7 +10,7 @@ using namespace std;
 
 
 
-
+//  typedef double (*func_ptr)(double u, double t); try to use typdef for passing in lambda as arg.
 // create a name for the file output
 
 
