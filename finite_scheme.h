@@ -23,6 +23,7 @@ class finite_scheme
 	string name = "finite Scheme";
 	double lmax;
 	double l2;
+	int Val = 0;
 	double l1;
 	double x = 0;
 	double delta_x = 0.1;
@@ -71,7 +72,8 @@ public:
 	*/
 	virtual string get_name() { return name;  };
 
-	
+	virtual void print() {}
+
 
 
 
@@ -124,13 +126,12 @@ protected:
 
 class forward_scheme : public finite_scheme{
 
-	string name = "forward Scheme";
+	string name = "Forward Scheme";
 
 	public:
 		forward_scheme(double delta_x);
 		virtual string get_name() { return this->name; };
-		virtual void print() { cout << "forward scheme"; }
-		
+		virtual void print();
 
 protected:
 
@@ -157,13 +158,12 @@ protected:
 
 class center_scheme : public finite_scheme {
 
-	string name = "center Scheme";
+	string name = "Center Scheme";
 
 public:
 	center_scheme(double delta_x);
 	virtual string get_name() { return this->name; };
-	virtual void print() { cout << "center scheme"; }
-
+	virtual void print();
 
 protected:
 	virtual double scheme_function(double x, double delta_x);
