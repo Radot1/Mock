@@ -1,3 +1,4 @@
+#include <iomanip>
 #include "finite_scheme.h"
 
 
@@ -68,8 +69,8 @@ double finite_scheme::f(double x){ return 3 * pow(x, 3) + 2 * x + 1; }
 
 vector<double> finite_scheme::scheme()
 {
-
-	cout << "\n scheme loop for  " << this->get_name()<<  endl;
+	
+	
 
 	do
 	{
@@ -77,7 +78,6 @@ vector<double> finite_scheme::scheme()
 		discreet_values.push_back(discreet_value);
 		error = discreet_value - f_prime_x(x);
 		error_v.push_back(error);
-		cout << "x=" << x << "delta_x =" << delta_x << "f_prime_x =" << f_prime_x(x) << "error = " << error << "discreet value =" << discreet_value << endl;
 		x += delta_x;
 	} while (x <= 1);
 
@@ -96,6 +96,19 @@ forward_scheme::forward_scheme(double a)
 
 }
 
+void forward_scheme::print()
+{
+		cout << fixed << setprecision(2);
+		cout << this->get_name() << " For dx = " << delta_x << endl;
+		cout << "x     |  " << "delta_x   |  " << "f_prime_x     |  " << "error  |  " << "discreet value" << endl;
+	for (int i = 0; i < error_v.size();i++){
+		cout << delta_x*(i) << "  |    " << delta_x << "    |      " << f_prime_x(delta_x * (i)) << "      |   " << error_v[i] << "  |      " << discreet_values[i] << endl;
+
+	}
+
+			
+}
+
 double forward_scheme::scheme_function(double x, double delta_x){ return (f(x + delta_x) - f(x)) / delta_x; }
 
 
@@ -105,6 +118,19 @@ center_scheme::center_scheme(double a)
 	in = this->scheme();
 	lmax = this->calc_lmax(in);
 	l2 = this->calc_l2(in);
+
+
+}
+
+void center_scheme::print()
+{
+	cout << fixed << setprecision(2);
+	cout << this->get_name() << " For dx = " << delta_x << endl;
+	cout << "x     |  " << "delta_x   |  " << "f_prime_x     |  " << "error  |  " << "discreet value" << endl;
+	for (int i = 0; i < error_v.size(); i++) {
+		cout << delta_x * (i) << "  |    " << delta_x << "    |      " << f_prime_x(delta_x * (i)) << "      |   " << error_v[i] << "  |      " << discreet_values[i] << endl;
+
+	}
 
 
 }

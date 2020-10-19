@@ -23,9 +23,6 @@ int main()
 	string filename = "exampleOutput.csv";
 
 	cout << setprecision(10);
-	
-	double x =0 ;
-	double delta_x = 0.1;
 
 
 	
@@ -41,23 +38,30 @@ int main()
 
 		 center_scheme cnt = center_scheme(0.1);
 		 forward_scheme fd = forward_scheme(0.1);
+		 
+		 fd.print();
+		 cout << setprecision(8);
+		 cout << "L0 = " << fd.get_lmax() << endl;
+		 cout << "L2 = " << fd.get_l2() << endl << endl;
 
-		 cout << "finite_Scheme class lmax calc. cnt = " << cnt.get_lmax() << endl;
-		 cout << "forward scheme class lmax calc. fd = " << fd.get_lmax() << endl;
-		 cout << "finite_Scheme class l2 calc. fd = " << fd.get_l2() << endl;
-		 cout << "finite_Scheme class l2 calc. cnt = " << cnt.get_l2() << endl;
+		 cnt.print();
+		 cout << setprecision(8);
+		 cout << "L0 = " << cnt.get_lmax() << endl;
+		 cout << "L2= " << cnt.get_l2() << endl << endl;
 
 
 		 center_scheme cnt_001 = center_scheme(0.01);
 		 forward_scheme fd_001 = forward_scheme(0.01);
 
-		 cout << "finite_Scheme class lmax calc. cnt = " << cnt_001.get_lmax() << endl;
-		 cout << "forward scheme class lmax calc. fd = " << fd_001.get_lmax() << endl;
-		 cout << "finite_Scheme class l2 calc. fd = " << fd_001.get_l2() << endl;
-		 cout << "finite_Scheme class l2 calc. cnt = " << cnt_001.get_l2() << endl;
+		 fd_001.print();
+		 cout << setprecision(8);
+		 cout << "L0 = " << fd_001.get_lmax() << endl;
+		 cout << "L2 = " << fd_001.get_l2() << endl << endl;
 
-		 cnt.print();
-		 fd.print();
+		 cnt_001.print();
+		 cout << setprecision(8);
+		 cout << "L0 = " << cnt_001.get_lmax() << endl;
+		 cout << "L2= " << cnt_001.get_l2() << endl << endl;
 
 
 
