@@ -79,7 +79,7 @@ vector<double> finite_scheme::scheme()
 		error_v.push_back(error);
 		cout << "x=" << x << "delta_x =" << delta_x << "f_prime_x =" << f_prime_x(x) << "error = " << error << "discreet value =" << discreet_value << endl;
 		x += delta_x;
-	} while (x <= 1);
+	} while (x <= 1 + (delta_x / 2));
 
 	return error_v;
 }

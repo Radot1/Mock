@@ -17,54 +17,54 @@ using namespace std;
 
 int main()
 
+// for purposes of demonstration, an interactive loop is included that lets you choose a scheme, a delta x value, and the
+// choice to print your file to the screen or a csv;
+
 {
-	ofstream outputFile;
-	ofstream fs;
-	string filename = "exampleOutput.csv";
+	int c;
+	double dx;
+	int print;
+	finite_scheme scheme;
 
-	cout << setprecision(10);
+	do
+	{
+		cout << "Choose scheme 1. forward difference 2. Central  3 to exit" << endl;
+		cin >> c;
+		if (c == 3) { break; }
+		cout << "Choose delta x" << endl;
+		cin >> dx;
+		cout << "Choose scheme 1. Print to Screen 2. Print to file" << endl;
+		cin >> print;
+
+		switch (c) {
+		case 1:
+			scheme = forward_scheme(dx);
+			break;
+		case 2:
+			scheme = center_scheme(dx);
+			break;
+		default:
+			break;
+
+		}
+
+		switch (print) {
+		case 1:
+			break;
+		case 2:
+			break;
+		default:
+			break;
+
+		}
+
+
+
+
+	} while (true);
 	
-	double x =0 ;
-	double delta_x = 0.1;
 
 
-	
-	fs.open(filename);
-
-
-
-	fs << "x" << ", " << "fwd" << ", " << "fwd error" << ", " << "back" << ", " << "back error" << ", " << "center" <<
-		", " << "center error" << ", " << "f'(x)" << " ," << "dx" << endl;
-
-
-
-
-		 center_scheme cnt = center_scheme(0.1);
-		 forward_scheme fd = forward_scheme(0.1);
-
-		 cout << "finite_Scheme class lmax calc. cnt = " << cnt.get_lmax() << endl;
-		 cout << "forward scheme class lmax calc. fd = " << fd.get_lmax() << endl;
-		 cout << "finite_Scheme class l2 calc. fd = " << fd.get_l2() << endl;
-		 cout << "finite_Scheme class l2 calc. cnt = " << cnt.get_l2() << endl;
-
-
-		 center_scheme cnt_001 = center_scheme(0.01);
-		 forward_scheme fd_001 = forward_scheme(0.01);
-
-		 cout << "finite_Scheme class lmax calc. cnt = " << cnt_001.get_lmax() << endl;
-		 cout << "forward scheme class lmax calc. fd = " << fd_001.get_lmax() << endl;
-		 cout << "finite_Scheme class l2 calc. fd = " << fd_001.get_l2() << endl;
-		 cout << "finite_Scheme class l2 calc. cnt = " << cnt_001.get_l2() << endl;
-
-		 cnt.print();
-		 fd.print();
-
-
-
-  fs.close();
-
-  cout << "enter to stop" << endl;
-  cin.get();
   return 0;
 
 

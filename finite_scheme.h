@@ -13,8 +13,7 @@ using namespace std;
 * The Finite Scheme class provides:
 * \n-constructors for creating a Finite scheme 
 * \n-acessor functions to extract Norms, print output to a screen or csv file
-* \n-basic operations like access via [] operator, assignment and comparision
-*/
+*/																  
 
 
 
@@ -72,7 +71,7 @@ public:
 	*/
 	virtual string get_name() { return name;  };
 
-	virtual void print() { cout <<"test";}
+	
 
 
 
@@ -110,6 +109,19 @@ protected:
 };
 
 
+
+/**
+*  A Forward difference Scheme for storage and calculation of a finite scheme and comparison to an Analytical Solution including error calculation.
+*  \n
+*  \n
+* The Finite Scheme class provides:
+* \n-constructors for creating a Finite scheme
+* \n-acessor functions to extract Norms, print output to a screen or csv file
+*/
+
+
+
+
 class forward_scheme : public finite_scheme{
 
 	string name = "forward Scheme";
@@ -121,9 +133,28 @@ class forward_scheme : public finite_scheme{
 		
 
 protected:
+
+
+
 	virtual double scheme_function(double x, double delta_x);
 
 };
+
+
+
+
+/**
+*  A Forward difference Scheme for storage and calculation of a finite scheme and comparison to an Analytical Solution including error calculation.
+*  \n
+*  \n
+* The Finite Scheme class provides:
+* \n-constructors for creating a Finite scheme
+* \n-acessor functions to extract Norms, print output to a screen or csv file
+*/
+
+
+
+
 class center_scheme : public finite_scheme {
 
 	string name = "center Scheme";
@@ -131,6 +162,7 @@ class center_scheme : public finite_scheme {
 public:
 	center_scheme(double delta_x);
 	virtual string get_name() { return this->name; };
+	virtual void print() { cout << "center scheme"; }
 
 
 protected:

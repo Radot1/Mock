@@ -16,6 +16,8 @@ Inheritance diagram for forward\+\_\+scheme\+:\begin{figure}[H]
 \textbf{ forward\+\_\+scheme} (double \textbf{ delta\+\_\+x})
 \item 
 virtual string \textbf{ get\+\_\+name} ()
+\item 
+virtual void \textbf{ print} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
@@ -28,7 +30,7 @@ virtual double \textbf{ scheme\+\_\+function} (double \textbf{ x}, double \textb
 \doxysubsection{Detailed Description}
 
 
-Definition at line 101 of file finite\+\_\+scheme.\+h.
+Definition at line 113 of file finite\+\_\+scheme.\+h.
 
 
 
@@ -41,7 +43,7 @@ Definition at line 101 of file finite\+\_\+scheme.\+h.
 
 
 
-Definition at line 95 of file finite\+\_\+scheme.\+cpp.
+Definition at line 89 of file finite\+\_\+scheme.\+cpp.
 
 
 
@@ -52,13 +54,23 @@ Definition at line 95 of file finite\+\_\+scheme.\+cpp.
 \doxysubsubsection{get\_name()}
 {\footnotesize\ttfamily virtual string forward\+\_\+scheme\+::get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
-
+get method that returns name of scheme 
 
 Reimplemented from \textbf{ finite\+\_\+scheme} \doxyref{}{p.}{classfinite__scheme_acd2a7427c2c11e18a12d319e84190b66}.
 
 
 
-Definition at line 107 of file finite\+\_\+scheme.\+h.
+Definition at line 119 of file finite\+\_\+scheme.\+h.
+
+\mbox{\label{classforward__scheme_a7226c1ea687b63ebe4467dd36a7b5aa8}} 
+\index{forward\_scheme@{forward\_scheme}!print@{print}}
+\index{print@{print}!forward\_scheme@{forward\_scheme}}
+\doxysubsubsection{print()}
+{\footnotesize\ttfamily virtual void forward\+\_\+scheme\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 120 of file finite\+\_\+scheme.\+h.
 
 \mbox{\label{classforward__scheme_ae15ba025024bea22eb757572ce2e37d7}} 
 \index{forward\_scheme@{forward\_scheme}!scheme\_function@{scheme\_function}}
@@ -66,13 +78,13 @@ Definition at line 107 of file finite\+\_\+scheme.\+h.
 \doxysubsubsection{scheme\_function()}
 {\footnotesize\ttfamily double forward\+\_\+scheme\+::scheme\+\_\+function (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{delta\+\_\+x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
 
-
+virtual fuction that calculates a discreet scheme 
 
 Reimplemented from \textbf{ finite\+\_\+scheme} \doxyref{}{p.}{classfinite__scheme_ab14c23b09ceada1279be751f53ebb13c}.
 
 
 
-Definition at line 105 of file finite\+\_\+scheme.\+cpp.
+Definition at line 99 of file finite\+\_\+scheme.\+cpp.
 
 
 

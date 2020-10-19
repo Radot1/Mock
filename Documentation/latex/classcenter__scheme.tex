@@ -16,6 +16,8 @@ Inheritance diagram for center\+\_\+scheme\+:\begin{figure}[H]
 \textbf{ center\+\_\+scheme} (double \textbf{ delta\+\_\+x})
 \item 
 virtual string \textbf{ get\+\_\+name} ()
+\item 
+virtual void \textbf{ print} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
@@ -28,7 +30,7 @@ virtual double \textbf{ scheme\+\_\+function} (double \textbf{ x}, double \textb
 \doxysubsection{Detailed Description}
 
 
-Definition at line 114 of file finite\+\_\+scheme.\+h.
+Definition at line 130 of file finite\+\_\+scheme.\+h.
 
 
 
@@ -41,7 +43,7 @@ Definition at line 114 of file finite\+\_\+scheme.\+h.
 
 
 
-Definition at line 108 of file finite\+\_\+scheme.\+cpp.
+Definition at line 102 of file finite\+\_\+scheme.\+cpp.
 
 
 
@@ -52,13 +54,23 @@ Definition at line 108 of file finite\+\_\+scheme.\+cpp.
 \doxysubsubsection{get\_name()}
 {\footnotesize\ttfamily virtual string center\+\_\+scheme\+::get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
-
+get method that returns name of scheme 
 
 Reimplemented from \textbf{ finite\+\_\+scheme} \doxyref{}{p.}{classfinite__scheme_acd2a7427c2c11e18a12d319e84190b66}.
 
 
 
-Definition at line 120 of file finite\+\_\+scheme.\+h.
+Definition at line 136 of file finite\+\_\+scheme.\+h.
+
+\mbox{\label{classcenter__scheme_aea9b27dcd84b965ab8e4402e4fa6a450}} 
+\index{center\_scheme@{center\_scheme}!print@{print}}
+\index{print@{print}!center\_scheme@{center\_scheme}}
+\doxysubsubsection{print()}
+{\footnotesize\ttfamily virtual void center\+\_\+scheme\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 137 of file finite\+\_\+scheme.\+h.
 
 \mbox{\label{classcenter__scheme_a0dc5a95cebc5b847110629b8ea2a892a}} 
 \index{center\_scheme@{center\_scheme}!scheme\_function@{scheme\_function}}
@@ -66,13 +78,13 @@ Definition at line 120 of file finite\+\_\+scheme.\+h.
 \doxysubsubsection{scheme\_function()}
 {\footnotesize\ttfamily double center\+\_\+scheme\+::scheme\+\_\+function (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{delta\+\_\+x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
 
-
+virtual fuction that calculates a discreet scheme 
 
 Reimplemented from \textbf{ finite\+\_\+scheme} \doxyref{}{p.}{classfinite__scheme_ab14c23b09ceada1279be751f53ebb13c}.
 
 
 
-Definition at line 118 of file finite\+\_\+scheme.\+cpp.
+Definition at line 112 of file finite\+\_\+scheme.\+cpp.
 
 
 

@@ -94,8 +94,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ace7e28584a2ba97cd78b2551880109ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a789b4d60ed503134f70a46d5fc8c76b3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfinite__scheme.html#a789b4d60ed503134f70a46d5fc8c76b3">get_lmax</a> ()</td></tr>
 <tr class="separator:a789b4d60ed503134f70a46d5fc8c76b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc61f89ecebce11a96ecf1e5ff302c7c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfinite__scheme.html#acc61f89ecebce11a96ecf1e5ff302c7c">get_l1</a> ()</td></tr>
-<tr class="separator:acc61f89ecebce11a96ecf1e5ff302c7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c2bdb78e3b0529bfdc8a82baf451c17"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfinite__scheme.html#a9c2bdb78e3b0529bfdc8a82baf451c17">get_l2</a> ()</td></tr>
 <tr class="separator:a9c2bdb78e3b0529bfdc8a82baf451c17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd2a7427c2c11e18a12d319e84190b66"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfinite__scheme.html#acd2a7427c2c11e18a12d319e84190b66">get_name</a> ()</td></tr>
@@ -130,8 +128,6 @@ Public Attributes</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a816c2776c9576462b3195107c826572d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfinite__scheme.html#a816c2776c9576462b3195107c826572d">calc_lmax</a> (vector&lt; double &gt; <a class="el" href="classfinite__scheme.html#acbb07acd43dc5f2e54faa41a3d5da1fd">in</a>)</td></tr>
 <tr class="separator:a816c2776c9576462b3195107c826572d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83147fdf2b7aa9fa55a9fcfc098b9875"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfinite__scheme.html#a83147fdf2b7aa9fa55a9fcfc098b9875">calc_l1</a> (vector&lt; double &gt; <a class="el" href="classfinite__scheme.html#acbb07acd43dc5f2e54faa41a3d5da1fd">in</a>)</td></tr>
-<tr class="separator:a83147fdf2b7aa9fa55a9fcfc098b9875"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ffd1d8dc077297c15fe21ffe1bfcd39"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfinite__scheme.html#a6ffd1d8dc077297c15fe21ffe1bfcd39">calc_l2</a> (vector&lt; double &gt; <a class="el" href="classfinite__scheme.html#acbb07acd43dc5f2e54faa41a3d5da1fd">in</a>)</td></tr>
 <tr class="separator:a6ffd1d8dc077297c15fe21ffe1bfcd39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab010fc1cfe322a592ff242d7d615e1af"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfinite__scheme.html#ab010fc1cfe322a592ff242d7d615e1af">f</a> (double <a class="el" href="classfinite__scheme.html#ae1ea80eeb93e3912e1c2f5f04d9e54a9">x</a>)</td></tr>
@@ -146,14 +142,12 @@ Protected Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A Finite Scheme for storage and calculation of a finite scheme and comparison to an Analytical Solution including error calculation. <br  />
  <br  />
-</p>
-<p>The Finite Scheme class provides: <br  />
--constructors for creating a Finite scheme</p>
-<p><br  />
+ The Finite Scheme class provides: <br  />
+-constructors for creating a Finite scheme <br  />
 -acessor functions to extract Norms, print output to a screen or csv file <br  />
 -basic operations like access via [] operator, assignment and comparision </p>
 
-<p class="definition">Definition at line <a class="el" href="finite__scheme_8h_source.html#l00022">22</a> of file <a class="el" href="finite__scheme_8h_source.html">finite_scheme.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="finite__scheme_8h_source.html#l00021">21</a> of file <a class="el" href="finite__scheme_8h_source.html">finite_scheme.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6013be2b546a73b32911ad761c271458"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6013be2b546a73b32911ad761c271458">&#9670;&nbsp;</a></span>finite_scheme() <span class="overload">[1/2]</span></h2>
@@ -224,34 +218,6 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a83147fdf2b7aa9fa55a9fcfc098b9875"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83147fdf2b7aa9fa55a9fcfc098b9875">&#9670;&nbsp;</a></span>calc_l1()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double finite_scheme::calc_l1 </td>
-          <td>(</td>
-          <td class="paramtype">vector&lt; double &gt;&#160;</td>
-          <td class="paramname"><em>in</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="finite__scheme_8cpp_source.html#l00058">58</a> of file <a class="el" href="finite__scheme_8cpp_source.html">finite_scheme.cpp</a>.</p>
-
-</div>
-</div>
 <a id="a6ffd1d8dc077297c15fe21ffe1bfcd39"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6ffd1d8dc077297c15fe21ffe1bfcd39">&#9670;&nbsp;</a></span>calc_l2()</h2>
 
@@ -275,8 +241,9 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>protected method that returns a double. It returns L2 norm from a vector of truncation errors. </p>
 
-<p class="definition">Definition at line <a class="el" href="finite__scheme_8cpp_source.html#l00063">63</a> of file <a class="el" href="finite__scheme_8cpp_source.html">finite_scheme.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="finite__scheme_8cpp_source.html#l00057">57</a> of file <a class="el" href="finite__scheme_8cpp_source.html">finite_scheme.cpp</a>.</p>
 
 </div>
 </div>
@@ -303,12 +270,9 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Normal protected method that returns a double. It returns L1 norm of vector </p><dl class="section see"><dt>See also</dt><dd>two_norm()const </dd>
-<dd>
-uniform_norm()const </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>double. vectors L1 norm </dd></dl>
+<p>protected method that returns a double. It returns Lmax norm from a vector of truncation errors. </p>
 
-<p class="definition">Definition at line <a class="el" href="finite__scheme_8cpp_source.html#l00051">51</a> of file <a class="el" href="finite__scheme_8cpp_source.html">finite_scheme.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="finite__scheme_8cpp_source.html#l00048">48</a> of file <a class="el" href="finite__scheme_8cpp_source.html">finite_scheme.cpp</a>.</p>
 
 </div>
 </div>
@@ -336,7 +300,7 @@ uniform_norm()const </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="finite__scheme_8cpp_source.html#l00073">73</a> of file <a class="el" href="finite__scheme_8cpp_source.html">finite_scheme.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="finite__scheme_8cpp_source.html#l00067">67</a> of file <a class="el" href="finite__scheme_8cpp_source.html">finite_scheme.cpp</a>.</p>
 
 </div>
 </div>
@@ -364,26 +328,7 @@ uniform_norm()const </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="finite__scheme_8h_source.html#l00094">94</a> of file <a class="el" href="finite__scheme_8h_source.html">finite_scheme.h</a>.</p>
-
-</div>
-</div>
-<a id="acc61f89ecebce11a96ecf1e5ff302c7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc61f89ecebce11a96ecf1e5ff302c7c">&#9670;&nbsp;</a></span>get_l1()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double finite_scheme::get_l1 </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="finite__scheme_8cpp_source.html#l00035">35</a> of file <a class="el" href="finite__scheme_8cpp_source.html">finite_scheme.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="finite__scheme_8h_source.html#l00100">100</a> of file <a class="el" href="finite__scheme_8h_source.html">finite_scheme.h</a>.</p>
 
 </div>
 </div>
@@ -401,8 +346,9 @@ uniform_norm()const </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>get method that returns L2 </p>
 
-<p class="definition">Definition at line <a class="el" href="finite__scheme_8cpp_source.html#l00040">40</a> of file <a class="el" href="finite__scheme_8cpp_source.html">finite_scheme.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="finite__scheme_8cpp_source.html#l00037">37</a> of file <a class="el" href="finite__scheme_8cpp_source.html">finite_scheme.cpp</a>.</p>
 
 </div>
 </div>
@@ -420,7 +366,7 @@ uniform_norm()const </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Normal get method that returns integer, the size of the vector </p><dl class="section return"><dt>Returns</dt><dd>int. the size of the vector </dd></dl>
+<p>get method that returns Lmax </p>
 
 <p class="definition">Definition at line <a class="el" href="finite__scheme_8cpp_source.html#l00030">30</a> of file <a class="el" href="finite__scheme_8cpp_source.html">finite_scheme.cpp</a>.</p>
 
@@ -448,10 +394,11 @@ uniform_norm()const </dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>get method that returns name of scheme </p>
 
 <p>Reimplemented in <a class="el" href="classcenter__scheme.html#a5bdafa2affd9dc9ad6357ff40475c9c4">center_scheme</a>, and <a class="el" href="classforward__scheme.html#aeca4c1a6e4ccbf1788518b1f67168de2">forward_scheme</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="finite__scheme_8h_source.html#l00071">71</a> of file <a class="el" href="finite__scheme_8h_source.html">finite_scheme.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="finite__scheme_8h_source.html#l00073">73</a> of file <a class="el" href="finite__scheme_8h_source.html">finite_scheme.h</a>.</p>
 
 </div>
 </div>
@@ -478,7 +425,7 @@ uniform_norm()const </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="finite__scheme_8cpp_source.html#l00075">75</a> of file <a class="el" href="finite__scheme_8cpp_source.html">finite_scheme.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="finite__scheme_8cpp_source.html#l00069">69</a> of file <a class="el" href="finite__scheme_8cpp_source.html">finite_scheme.cpp</a>.</p>
 
 </div>
 </div>
@@ -515,10 +462,11 @@ uniform_norm()const </dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>virtual fuction that calculates a discreet scheme </p>
 
 <p>Reimplemented in <a class="el" href="classcenter__scheme.html#a0dc5a95cebc5b847110629b8ea2a892a">center_scheme</a>, and <a class="el" href="classforward__scheme.html#ae15ba025024bea22eb757572ce2e37d7">forward_scheme</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="finite__scheme_8cpp_source.html#l00093">93</a> of file <a class="el" href="finite__scheme_8cpp_source.html">finite_scheme.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="finite__scheme_8cpp_source.html#l00087">87</a> of file <a class="el" href="finite__scheme_8cpp_source.html">finite_scheme.cpp</a>.</p>
 
 </div>
 </div>
@@ -535,7 +483,7 @@ uniform_norm()const </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="finite__scheme_8h_source.html#l00030">30</a> of file <a class="el" href="finite__scheme_8h_source.html">finite_scheme.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="finite__scheme_8h_source.html#l00029">29</a> of file <a class="el" href="finite__scheme_8h_source.html">finite_scheme.h</a>.</p>
 
 </div>
 </div>
@@ -551,7 +499,7 @@ uniform_norm()const </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="finite__scheme_8h_source.html#l00032">32</a> of file <a class="el" href="finite__scheme_8h_source.html">finite_scheme.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="finite__scheme_8h_source.html#l00031">31</a> of file <a class="el" href="finite__scheme_8h_source.html">finite_scheme.h</a>.</p>
 
 </div>
 </div>
@@ -567,7 +515,7 @@ uniform_norm()const </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="finite__scheme_8h_source.html#l00034">34</a> of file <a class="el" href="finite__scheme_8h_source.html">finite_scheme.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="finite__scheme_8h_source.html#l00033">33</a> of file <a class="el" href="finite__scheme_8h_source.html">finite_scheme.h</a>.</p>
 
 </div>
 </div>
@@ -583,7 +531,7 @@ uniform_norm()const </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="finite__scheme_8h_source.html#l00031">31</a> of file <a class="el" href="finite__scheme_8h_source.html">finite_scheme.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="finite__scheme_8h_source.html#l00030">30</a> of file <a class="el" href="finite__scheme_8h_source.html">finite_scheme.h</a>.</p>
 
 </div>
 </div>
@@ -599,7 +547,7 @@ uniform_norm()const </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="finite__scheme_8h_source.html#l00033">33</a> of file <a class="el" href="finite__scheme_8h_source.html">finite_scheme.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="finite__scheme_8h_source.html#l00032">32</a> of file <a class="el" href="finite__scheme_8h_source.html">finite_scheme.h</a>.</p>
 
 </div>
 </div>
@@ -615,7 +563,7 @@ uniform_norm()const </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="finite__scheme_8h_source.html#l00035">35</a> of file <a class="el" href="finite__scheme_8h_source.html">finite_scheme.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="finite__scheme_8h_source.html#l00034">34</a> of file <a class="el" href="finite__scheme_8h_source.html">finite_scheme.h</a>.</p>
 
 </div>
 </div>
@@ -631,7 +579,7 @@ uniform_norm()const </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="finite__scheme_8h_source.html#l00028">28</a> of file <a class="el" href="finite__scheme_8h_source.html">finite_scheme.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="finite__scheme_8h_source.html#l00027">27</a> of file <a class="el" href="finite__scheme_8h_source.html">finite_scheme.h</a>.</p>
 
 </div>
 </div>
@@ -647,7 +595,7 @@ uniform_norm()const </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="finite__scheme_8h_source.html#l00027">27</a> of file <a class="el" href="finite__scheme_8h_source.html">finite_scheme.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="finite__scheme_8h_source.html#l00026">26</a> of file <a class="el" href="finite__scheme_8h_source.html">finite_scheme.h</a>.</p>
 
 </div>
 </div>
@@ -663,7 +611,7 @@ uniform_norm()const </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="finite__scheme_8h_source.html#l00026">26</a> of file <a class="el" href="finite__scheme_8h_source.html">finite_scheme.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="finite__scheme_8h_source.html#l00025">25</a> of file <a class="el" href="finite__scheme_8h_source.html">finite_scheme.h</a>.</p>
 
 </div>
 </div>
@@ -679,7 +627,7 @@ uniform_norm()const </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="finite__scheme_8h_source.html#l00025">25</a> of file <a class="el" href="finite__scheme_8h_source.html">finite_scheme.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="finite__scheme_8h_source.html#l00024">24</a> of file <a class="el" href="finite__scheme_8h_source.html">finite_scheme.h</a>.</p>
 
 </div>
 </div>
@@ -695,7 +643,7 @@ uniform_norm()const </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="finite__scheme_8h_source.html#l00029">29</a> of file <a class="el" href="finite__scheme_8h_source.html">finite_scheme.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="finite__scheme_8h_source.html#l00028">28</a> of file <a class="el" href="finite__scheme_8h_source.html">finite_scheme.h</a>.</p>
 
 </div>
 </div>
