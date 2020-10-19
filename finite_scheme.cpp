@@ -32,10 +32,7 @@ double finite_scheme::get_lmax()
 	return lmax;
 }
 
-double finite_scheme::get_l1()
-{
-	return l1;
-}
+
 
 double finite_scheme::get_l2()
 {
@@ -55,10 +52,7 @@ double finite_scheme::calc_lmax(vector<double> in)
 	return lmax;
 }
 
-double finite_scheme::calc_l1(vector<double> in)
-{
-	return 0.0;
-}
+
 
 double finite_scheme::calc_l2(vector<double> in)
 {

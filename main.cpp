@@ -56,6 +56,9 @@ int main()
 		 cout << "finite_Scheme class l2 calc. fd = " << fd_001.get_l2() << endl;
 		 cout << "finite_Scheme class l2 calc. cnt = " << cnt_001.get_l2() << endl;
 
+		 cnt.print();
+		 fd.print();
+
 
 
   fs.close();

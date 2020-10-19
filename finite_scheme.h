@@ -1,8 +1,8 @@
 using namespace std;
-#include<vector>;
-#include<algorithm>;
-#include<iostream>;
-#include<string>;
+#include<vector>
+#include<algorithm>
+#include<iostream>
+#include<string>
 
 
 /**
@@ -66,10 +66,12 @@ public:
 	/** get method that returns L2
 	*/
 	double get_l2();
-	double get_lmax();
+	
 	/** get method that returns name of scheme
 	*/
 	virtual string get_name() { return name;  };
+
+	virtual void print() { cout <<"test";}
 
 
 
@@ -114,6 +116,7 @@ class forward_scheme : public finite_scheme{
 	public:
 		forward_scheme(double delta_x);
 		virtual string get_name() { return this->name; };
+		virtual void print() { cout << "forward scheme"; }
 		
 
 protected:
