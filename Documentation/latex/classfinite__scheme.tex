@@ -24,6 +24,8 @@ double \textbf{ get\+\_\+lmax} ()
 double \textbf{ get\+\_\+l2} ()
 \item 
 virtual string \textbf{ get\+\_\+name} ()
+\item 
+virtual void \textbf{ print} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -33,6 +35,8 @@ string \textbf{ name} = \char`\"{}finite Scheme\char`\"{}
 double \textbf{ lmax}
 \item 
 double \textbf{ l2}
+\item 
+int \textbf{ Val} = 0
 \item 
 double \textbf{ l1}
 \item 
@@ -72,10 +76,9 @@ A Finite Scheme for storage and calculation of a finite scheme and comparison to
  ~\newline
  The Finite Scheme class provides\+: ~\newline
 -\/constructors for creating a Finite scheme ~\newline
--\/acessor functions to extract Norms, print output to a screen or csv file ~\newline
--\/basic operations like access via [] operator, assignment and comparision 
+-\/acessor functions to extract Norms, print output to a screen or csv file 
 
-Definition at line 21 of file finite\+\_\+scheme.\+h.
+Definition at line 23 of file finite\+\_\+scheme.\+h.
 
 
 
@@ -88,7 +91,7 @@ Definition at line 21 of file finite\+\_\+scheme.\+h.
 
 Default constructor. Intialize an empty Finite Scheme 
 
-Definition at line 15 of file finite\+\_\+scheme.\+cpp.
+Definition at line 17 of file finite\+\_\+scheme.\+cpp.
 
 \mbox{\label{classfinite__scheme_ae92e73d035cccbddbecc754f0ccc08a5}} 
 \index{finite\_scheme@{finite\_scheme}!finite\_scheme@{finite\_scheme}}
@@ -98,7 +101,7 @@ Definition at line 15 of file finite\+\_\+scheme.\+cpp.
 
 delta\+\_\+x constructor. Initialise finite scheme with a given delta X 
 
-Definition at line 6 of file finite\+\_\+scheme.\+cpp.
+Definition at line 8 of file finite\+\_\+scheme.\+cpp.
 
 \mbox{\label{classfinite__scheme_ace7e28584a2ba97cd78b2551880109ab}} 
 \index{finite\_scheme@{finite\_scheme}!````~finite\_scheme@{$\sim$finite\_scheme}}
@@ -108,7 +111,7 @@ Definition at line 6 of file finite\+\_\+scheme.\+cpp.
 
 
 
-Definition at line 26 of file finite\+\_\+scheme.\+cpp.
+Definition at line 28 of file finite\+\_\+scheme.\+cpp.
 
 
 
@@ -121,7 +124,7 @@ Definition at line 26 of file finite\+\_\+scheme.\+cpp.
 
 protected method that returns a double. It returns L2 norm from a vector of truncation errors. 
 
-Definition at line 57 of file finite\+\_\+scheme.\+cpp.
+Definition at line 59 of file finite\+\_\+scheme.\+cpp.
 
 \mbox{\label{classfinite__scheme_a816c2776c9576462b3195107c826572d}} 
 \index{finite\_scheme@{finite\_scheme}!calc\_lmax@{calc\_lmax}}
@@ -131,7 +134,7 @@ Definition at line 57 of file finite\+\_\+scheme.\+cpp.
 
 protected method that returns a double. It returns Lmax norm from a vector of truncation errors. 
 
-Definition at line 48 of file finite\+\_\+scheme.\+cpp.
+Definition at line 50 of file finite\+\_\+scheme.\+cpp.
 
 \mbox{\label{classfinite__scheme_ab010fc1cfe322a592ff242d7d615e1af}} 
 \index{finite\_scheme@{finite\_scheme}!f@{f}}
@@ -141,7 +144,7 @@ Definition at line 48 of file finite\+\_\+scheme.\+cpp.
 
 
 
-Definition at line 67 of file finite\+\_\+scheme.\+cpp.
+Definition at line 69 of file finite\+\_\+scheme.\+cpp.
 
 \mbox{\label{classfinite__scheme_a08334bd8dcf5af7d57e9319e5339eb57}} 
 \index{finite\_scheme@{finite\_scheme}!f\_prime\_x@{f\_prime\_x}}
@@ -151,7 +154,7 @@ Definition at line 67 of file finite\+\_\+scheme.\+cpp.
 
 
 
-Definition at line 100 of file finite\+\_\+scheme.\+h.
+Definition at line 104 of file finite\+\_\+scheme.\+h.
 
 \mbox{\label{classfinite__scheme_a9c2bdb78e3b0529bfdc8a82baf451c17}} 
 \index{finite\_scheme@{finite\_scheme}!get\_l2@{get\_l2}}
@@ -161,7 +164,7 @@ Definition at line 100 of file finite\+\_\+scheme.\+h.
 
 get method that returns L2 
 
-Definition at line 37 of file finite\+\_\+scheme.\+cpp.
+Definition at line 39 of file finite\+\_\+scheme.\+cpp.
 
 \mbox{\label{classfinite__scheme_a789b4d60ed503134f70a46d5fc8c76b3}} 
 \index{finite\_scheme@{finite\_scheme}!get\_lmax@{get\_lmax}}
@@ -171,7 +174,7 @@ Definition at line 37 of file finite\+\_\+scheme.\+cpp.
 
 get method that returns Lmax 
 
-Definition at line 30 of file finite\+\_\+scheme.\+cpp.
+Definition at line 32 of file finite\+\_\+scheme.\+cpp.
 
 \mbox{\label{classfinite__scheme_acd2a7427c2c11e18a12d319e84190b66}} 
 \index{finite\_scheme@{finite\_scheme}!get\_name@{get\_name}}
@@ -185,7 +188,21 @@ Reimplemented in \textbf{ center\+\_\+scheme} \doxyref{}{p.}{classcenter__scheme
 
 
 
-Definition at line 73 of file finite\+\_\+scheme.\+h.
+Definition at line 76 of file finite\+\_\+scheme.\+h.
+
+\mbox{\label{classfinite__scheme_ac4b5098059657b82c4accc1547df16c0}} 
+\index{finite\_scheme@{finite\_scheme}!print@{print}}
+\index{print@{print}!finite\_scheme@{finite\_scheme}}
+\doxysubsubsection{print()}
+{\footnotesize\ttfamily virtual void finite\+\_\+scheme\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \textbf{ center\+\_\+scheme} \doxyref{}{p.}{classcenter__scheme_a7f3f0ecc93be136215fff81c9a7c91eb}, and \textbf{ forward\+\_\+scheme} \doxyref{}{p.}{classforward__scheme_a239b9ec5e390aea126eaeae82f136cce}.
+
+
+
+Definition at line 78 of file finite\+\_\+scheme.\+h.
 
 \mbox{\label{classfinite__scheme_ab14ceca14097b2e9628ac68def037d6a}} 
 \index{finite\_scheme@{finite\_scheme}!scheme@{scheme}}
@@ -195,7 +212,7 @@ Definition at line 73 of file finite\+\_\+scheme.\+h.
 
 
 
-Definition at line 69 of file finite\+\_\+scheme.\+cpp.
+Definition at line 71 of file finite\+\_\+scheme.\+cpp.
 
 \mbox{\label{classfinite__scheme_ab14c23b09ceada1279be751f53ebb13c}} 
 \index{finite\_scheme@{finite\_scheme}!scheme\_function@{scheme\_function}}
@@ -209,7 +226,7 @@ Reimplemented in \textbf{ center\+\_\+scheme} \doxyref{}{p.}{classcenter__scheme
 
 
 
-Definition at line 87 of file finite\+\_\+scheme.\+cpp.
+Definition at line 88 of file finite\+\_\+scheme.\+cpp.
 
 
 
@@ -222,7 +239,7 @@ Definition at line 87 of file finite\+\_\+scheme.\+cpp.
 
 
 
-Definition at line 29 of file finite\+\_\+scheme.\+h.
+Definition at line 32 of file finite\+\_\+scheme.\+h.
 
 \mbox{\label{classfinite__scheme_a8a772c378ef7f9bcb137d14f4a409505}} 
 \index{finite\_scheme@{finite\_scheme}!discreet\_value@{discreet\_value}}
@@ -232,7 +249,7 @@ Definition at line 29 of file finite\+\_\+scheme.\+h.
 
 
 
-Definition at line 31 of file finite\+\_\+scheme.\+h.
+Definition at line 34 of file finite\+\_\+scheme.\+h.
 
 \mbox{\label{classfinite__scheme_a23b975cd7888b23caa9f452387b12bf7}} 
 \index{finite\_scheme@{finite\_scheme}!discreet\_values@{discreet\_values}}
@@ -242,7 +259,7 @@ Definition at line 31 of file finite\+\_\+scheme.\+h.
 
 
 
-Definition at line 33 of file finite\+\_\+scheme.\+h.
+Definition at line 36 of file finite\+\_\+scheme.\+h.
 
 \mbox{\label{classfinite__scheme_a1e745c63d4447cc8fde5d288bacc1bba}} 
 \index{finite\_scheme@{finite\_scheme}!error@{error}}
@@ -252,7 +269,7 @@ Definition at line 33 of file finite\+\_\+scheme.\+h.
 
 
 
-Definition at line 30 of file finite\+\_\+scheme.\+h.
+Definition at line 33 of file finite\+\_\+scheme.\+h.
 
 \mbox{\label{classfinite__scheme_a39e7338f84827b0463ab2938c98c3c30}} 
 \index{finite\_scheme@{finite\_scheme}!error\_v@{error\_v}}
@@ -262,7 +279,7 @@ Definition at line 30 of file finite\+\_\+scheme.\+h.
 
 
 
-Definition at line 32 of file finite\+\_\+scheme.\+h.
+Definition at line 35 of file finite\+\_\+scheme.\+h.
 
 \mbox{\label{classfinite__scheme_acbb07acd43dc5f2e54faa41a3d5da1fd}} 
 \index{finite\_scheme@{finite\_scheme}!in@{in}}
@@ -272,7 +289,7 @@ Definition at line 32 of file finite\+\_\+scheme.\+h.
 
 
 
-Definition at line 34 of file finite\+\_\+scheme.\+h.
+Definition at line 37 of file finite\+\_\+scheme.\+h.
 
 \mbox{\label{classfinite__scheme_aa1f425daa31a21dc790a87e6748ad604}} 
 \index{finite\_scheme@{finite\_scheme}!l1@{l1}}
@@ -282,7 +299,7 @@ Definition at line 34 of file finite\+\_\+scheme.\+h.
 
 
 
-Definition at line 27 of file finite\+\_\+scheme.\+h.
+Definition at line 30 of file finite\+\_\+scheme.\+h.
 
 \mbox{\label{classfinite__scheme_ac959975836859775f5d9b78e3f30a233}} 
 \index{finite\_scheme@{finite\_scheme}!l2@{l2}}
@@ -292,7 +309,7 @@ Definition at line 27 of file finite\+\_\+scheme.\+h.
 
 
 
-Definition at line 26 of file finite\+\_\+scheme.\+h.
+Definition at line 28 of file finite\+\_\+scheme.\+h.
 
 \mbox{\label{classfinite__scheme_a82b4bc7d2ea5618f6004ba332edba99d}} 
 \index{finite\_scheme@{finite\_scheme}!lmax@{lmax}}
@@ -302,7 +319,7 @@ Definition at line 26 of file finite\+\_\+scheme.\+h.
 
 
 
-Definition at line 25 of file finite\+\_\+scheme.\+h.
+Definition at line 27 of file finite\+\_\+scheme.\+h.
 
 \mbox{\label{classfinite__scheme_a11edf93594a620eab1e6447e5f573992}} 
 \index{finite\_scheme@{finite\_scheme}!name@{name}}
@@ -312,7 +329,17 @@ Definition at line 25 of file finite\+\_\+scheme.\+h.
 
 
 
-Definition at line 24 of file finite\+\_\+scheme.\+h.
+Definition at line 26 of file finite\+\_\+scheme.\+h.
+
+\mbox{\label{classfinite__scheme_a284e6c1ed92484884d0c704355f0ec0b}} 
+\index{finite\_scheme@{finite\_scheme}!Val@{Val}}
+\index{Val@{Val}!finite\_scheme@{finite\_scheme}}
+\doxysubsubsection{Val}
+{\footnotesize\ttfamily int finite\+\_\+scheme\+::\+Val = 0}
+
+
+
+Definition at line 29 of file finite\+\_\+scheme.\+h.
 
 \mbox{\label{classfinite__scheme_ae1ea80eeb93e3912e1c2f5f04d9e54a9}} 
 \index{finite\_scheme@{finite\_scheme}!x@{x}}
@@ -322,7 +349,7 @@ Definition at line 24 of file finite\+\_\+scheme.\+h.
 
 
 
-Definition at line 28 of file finite\+\_\+scheme.\+h.
+Definition at line 31 of file finite\+\_\+scheme.\+h.
 
 
 

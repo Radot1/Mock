@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['x_62',['x',['../classfinite__scheme.html#ae1ea80eeb93e3912e1c2f5f04d9e54a9',1,'finite_scheme']]]
+  ['name_67',['name',['../classfinite__scheme.html#a11edf93594a620eab1e6447e5f573992',1,'finite_scheme']]]
 ];

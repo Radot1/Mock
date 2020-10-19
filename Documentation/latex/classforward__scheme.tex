@@ -15,9 +15,13 @@ Inheritance diagram for forward\+\_\+scheme\+:\begin{figure}[H]
 \item 
 \textbf{ forward\+\_\+scheme} (double \textbf{ delta\+\_\+x})
 \item 
+\textbf{ forward\+\_\+scheme} ()
+\item 
 virtual string \textbf{ get\+\_\+name} ()
 \item 
 virtual void \textbf{ print} ()
+\item 
+virtual void \textbf{ output} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
@@ -28,9 +32,13 @@ virtual double \textbf{ scheme\+\_\+function} (double \textbf{ x}, double \textb
 
 
 \doxysubsection{Detailed Description}
+A Forward difference Scheme for storage and calculation of a finite scheme and comparison to an Analytical Solution including error calculation. ~\newline
+ ~\newline
+The Finite Scheme class provides\+: ~\newline
+-\/constructors for creating a Finite scheme ~\newline
+-\/acessor functions to extract Norms, print output to a screen or csv file 
 
-
-Definition at line 113 of file finite\+\_\+scheme.\+h.
+Definition at line 130 of file finite\+\_\+scheme.\+h.
 
 
 
@@ -38,12 +46,22 @@ Definition at line 113 of file finite\+\_\+scheme.\+h.
 \mbox{\label{classforward__scheme_a17ecde571cfa471fdd1a3fd74b4d96d0}} 
 \index{forward\_scheme@{forward\_scheme}!forward\_scheme@{forward\_scheme}}
 \index{forward\_scheme@{forward\_scheme}!forward\_scheme@{forward\_scheme}}
-\doxysubsubsection{forward\_scheme()}
+\doxysubsubsection{forward\_scheme()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily forward\+\_\+scheme\+::forward\+\_\+scheme (\begin{DoxyParamCaption}\item[{double}]{delta\+\_\+x }\end{DoxyParamCaption})}
 
 
 
-Definition at line 89 of file finite\+\_\+scheme.\+cpp.
+Definition at line 90 of file finite\+\_\+scheme.\+cpp.
+
+\mbox{\label{classforward__scheme_a4d59eb6e318d282545a3bed76c3cc82d}} 
+\index{forward\_scheme@{forward\_scheme}!forward\_scheme@{forward\_scheme}}
+\index{forward\_scheme@{forward\_scheme}!forward\_scheme@{forward\_scheme}}
+\doxysubsubsection{forward\_scheme()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily forward\+\_\+scheme\+::forward\+\_\+scheme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 136 of file finite\+\_\+scheme.\+h.
 
 
 
@@ -60,17 +78,31 @@ Reimplemented from \textbf{ finite\+\_\+scheme} \doxyref{}{p.}{classfinite__sche
 
 
 
-Definition at line 119 of file finite\+\_\+scheme.\+h.
+Definition at line 137 of file finite\+\_\+scheme.\+h.
 
-\mbox{\label{classforward__scheme_a7226c1ea687b63ebe4467dd36a7b5aa8}} 
+\mbox{\label{classforward__scheme_ac4d7bd1b2af756f762cc5fa50c5cd2eb}} 
+\index{forward\_scheme@{forward\_scheme}!output@{output}}
+\index{output@{output}!forward\_scheme@{forward\_scheme}}
+\doxysubsubsection{output()}
+{\footnotesize\ttfamily void forward\+\_\+scheme\+::output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 114 of file finite\+\_\+scheme.\+cpp.
+
+\mbox{\label{classforward__scheme_a239b9ec5e390aea126eaeae82f136cce}} 
 \index{forward\_scheme@{forward\_scheme}!print@{print}}
 \index{print@{print}!forward\_scheme@{forward\_scheme}}
 \doxysubsubsection{print()}
-{\footnotesize\ttfamily virtual void forward\+\_\+scheme\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void forward\+\_\+scheme\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-Definition at line 120 of file finite\+\_\+scheme.\+h.
+Reimplemented from \textbf{ finite\+\_\+scheme} \doxyref{}{p.}{classfinite__scheme_ac4b5098059657b82c4accc1547df16c0}.
+
+
+
+Definition at line 100 of file finite\+\_\+scheme.\+cpp.
 
 \mbox{\label{classforward__scheme_ae15ba025024bea22eb757572ce2e37d7}} 
 \index{forward\_scheme@{forward\_scheme}!scheme\_function@{scheme\_function}}
@@ -84,7 +116,7 @@ Reimplemented from \textbf{ finite\+\_\+scheme} \doxyref{}{p.}{classfinite__sche
 
 
 
-Definition at line 99 of file finite\+\_\+scheme.\+cpp.
+Definition at line 127 of file finite\+\_\+scheme.\+cpp.
 
 
 

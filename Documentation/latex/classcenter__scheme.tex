@@ -15,9 +15,13 @@ Inheritance diagram for center\+\_\+scheme\+:\begin{figure}[H]
 \item 
 \textbf{ center\+\_\+scheme} (double \textbf{ delta\+\_\+x})
 \item 
+\textbf{ center\+\_\+scheme} ()
+\item 
 virtual string \textbf{ get\+\_\+name} ()
 \item 
 virtual void \textbf{ print} ()
+\item 
+virtual void \textbf{ output} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
@@ -28,9 +32,13 @@ virtual double \textbf{ scheme\+\_\+function} (double \textbf{ x}, double \textb
 
 
 \doxysubsection{Detailed Description}
+A Forward difference Scheme for storage and calculation of a finite scheme and comparison to an Analytical Solution including error calculation. ~\newline
+ ~\newline
+The Finite Scheme class provides\+: ~\newline
+-\/constructors for creating a Finite scheme ~\newline
+-\/acessor functions to extract Norms, print output to a screen or csv file 
 
-
-Definition at line 130 of file finite\+\_\+scheme.\+h.
+Definition at line 164 of file finite\+\_\+scheme.\+h.
 
 
 
@@ -38,12 +46,22 @@ Definition at line 130 of file finite\+\_\+scheme.\+h.
 \mbox{\label{classcenter__scheme_aeb78c35ae3d57bb4e5cd5afe778d3b62}} 
 \index{center\_scheme@{center\_scheme}!center\_scheme@{center\_scheme}}
 \index{center\_scheme@{center\_scheme}!center\_scheme@{center\_scheme}}
-\doxysubsubsection{center\_scheme()}
+\doxysubsubsection{center\_scheme()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily center\+\_\+scheme\+::center\+\_\+scheme (\begin{DoxyParamCaption}\item[{double}]{delta\+\_\+x }\end{DoxyParamCaption})}
 
 
 
-Definition at line 102 of file finite\+\_\+scheme.\+cpp.
+Definition at line 130 of file finite\+\_\+scheme.\+cpp.
+
+\mbox{\label{classcenter__scheme_ac18fb3e55a7a40b23faf724e5bb883d2}} 
+\index{center\_scheme@{center\_scheme}!center\_scheme@{center\_scheme}}
+\index{center\_scheme@{center\_scheme}!center\_scheme@{center\_scheme}}
+\doxysubsubsection{center\_scheme()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily center\+\_\+scheme\+::center\+\_\+scheme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 140 of file finite\+\_\+scheme.\+cpp.
 
 
 
@@ -60,17 +78,31 @@ Reimplemented from \textbf{ finite\+\_\+scheme} \doxyref{}{p.}{classfinite__sche
 
 
 
-Definition at line 136 of file finite\+\_\+scheme.\+h.
+Definition at line 171 of file finite\+\_\+scheme.\+h.
 
-\mbox{\label{classcenter__scheme_aea9b27dcd84b965ab8e4402e4fa6a450}} 
+\mbox{\label{classcenter__scheme_a049df3edaa556ec643bb54e5e6181e0e}} 
+\index{center\_scheme@{center\_scheme}!output@{output}}
+\index{output@{output}!center\_scheme@{center\_scheme}}
+\doxysubsubsection{output()}
+{\footnotesize\ttfamily void center\+\_\+scheme\+::output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 157 of file finite\+\_\+scheme.\+cpp.
+
+\mbox{\label{classcenter__scheme_a7f3f0ecc93be136215fff81c9a7c91eb}} 
 \index{center\_scheme@{center\_scheme}!print@{print}}
 \index{print@{print}!center\_scheme@{center\_scheme}}
 \doxysubsubsection{print()}
-{\footnotesize\ttfamily virtual void center\+\_\+scheme\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void center\+\_\+scheme\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-Definition at line 137 of file finite\+\_\+scheme.\+h.
+Reimplemented from \textbf{ finite\+\_\+scheme} \doxyref{}{p.}{classfinite__scheme_ac4b5098059657b82c4accc1547df16c0}.
+
+
+
+Definition at line 144 of file finite\+\_\+scheme.\+cpp.
 
 \mbox{\label{classcenter__scheme_a0dc5a95cebc5b847110629b8ea2a892a}} 
 \index{center\_scheme@{center\_scheme}!scheme\_function@{scheme\_function}}
@@ -84,7 +116,7 @@ Reimplemented from \textbf{ finite\+\_\+scheme} \doxyref{}{p.}{classfinite__sche
 
 
 
-Definition at line 112 of file finite\+\_\+scheme.\+cpp.
+Definition at line 171 of file finite\+\_\+scheme.\+cpp.
 
 
 

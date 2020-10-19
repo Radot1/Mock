@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['name_61',['name',['../classfinite__scheme.html#a11edf93594a620eab1e6447e5f573992',1,'finite_scheme']]]
+  ['l1_64',['l1',['../classfinite__scheme.html#aa1f425daa31a21dc790a87e6748ad604',1,'finite_scheme']]],
+  ['l2_65',['l2',['../classfinite__scheme.html#ac959975836859775f5d9b78e3f30a233',1,'finite_scheme']]],
+  ['lmax_66',['lmax',['../classfinite__scheme.html#a82b4bc7d2ea5618f6004ba332edba99d',1,'finite_scheme']]]
 ];

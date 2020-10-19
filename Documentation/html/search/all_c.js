@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7efinite_5fscheme_29',['~finite_scheme',['../classfinite__scheme.html#ace7e28584a2ba97cd78b2551880109ab',1,'finite_scheme']]]
+  ['val_31',['Val',['../classfinite__scheme.html#a284e6c1ed92484884d0c704355f0ec0b',1,'finite_scheme']]]
 ];
