@@ -1,0 +1,371 @@
+\doxysection{finite\+\_\+scheme Class Reference}
+\label{classfinite__scheme}\index{finite\_scheme@{finite\_scheme}}
+
+
+{\ttfamily \#include $<$finite\+\_\+scheme.\+h$>$}
+
+Inheritance diagram for finite\+\_\+scheme\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classfinite__scheme}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ finite\+\_\+scheme} ()
+\item 
+\textbf{ finite\+\_\+scheme} (double \textbf{ delta\+\_\+x})
+\item 
+virtual \textbf{ $\sim$finite\+\_\+scheme} ()
+\item 
+double \textbf{ get\+\_\+lmax} ()
+\item 
+double \textbf{ get\+\_\+l1} ()
+\item 
+double \textbf{ get\+\_\+l2} ()
+\item 
+virtual string \textbf{ get\+\_\+name} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \textbf{ name} = \char`\"{}finite Scheme\char`\"{}
+\item 
+double \textbf{ lmax}
+\item 
+double \textbf{ l2}
+\item 
+double \textbf{ l1}
+\item 
+double \textbf{ x} = 0
+\item 
+double \textbf{ delta\+\_\+x} = 0.\+1
+\item 
+double \textbf{ error}
+\item 
+double \textbf{ discreet\+\_\+value}
+\item 
+vector$<$ double $>$ \textbf{ error\+\_\+v}
+\item 
+vector$<$ double $>$ \textbf{ discreet\+\_\+values}
+\item 
+vector$<$ double $>$ \textbf{ in}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \textbf{ calc\+\_\+lmax} (vector$<$ double $>$ \textbf{ in})
+\item 
+double \textbf{ calc\+\_\+l1} (vector$<$ double $>$ \textbf{ in})
+\item 
+double \textbf{ calc\+\_\+l2} (vector$<$ double $>$ \textbf{ in})
+\item 
+virtual double \textbf{ f} (double \textbf{ x})
+\item 
+virtual double \textbf{ f\+\_\+prime\+\_\+x} (double \textbf{ x})
+\item 
+virtual vector$<$ double $>$ \textbf{ scheme} ()
+\item 
+virtual double \textbf{ scheme\+\_\+function} (double \textbf{ x}, double \textbf{ delta\+\_\+x})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A Finite Scheme for storage and calculation of a finite scheme and comparison to an Analytical Solution including error calculation. ~\newline
+ ~\newline
+
+
+The Finite Scheme class provides\+: ~\newline
+-\/constructors for creating a Finite scheme
+
+~\newline
+-\/acessor functions to extract Norms, print output to a screen or csv file ~\newline
+-\/basic operations like access via [] operator, assignment and comparision 
+
+Definition at line 22 of file finite\+\_\+scheme.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{classfinite__scheme_a6013be2b546a73b32911ad761c271458}} 
+\index{finite\_scheme@{finite\_scheme}!finite\_scheme@{finite\_scheme}}
+\index{finite\_scheme@{finite\_scheme}!finite\_scheme@{finite\_scheme}}
+\doxysubsubsection{finite\_scheme()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily finite\+\_\+scheme\+::finite\+\_\+scheme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor. Intialize an empty Finite Scheme 
+
+Definition at line 15 of file finite\+\_\+scheme.\+cpp.
+
+\mbox{\label{classfinite__scheme_ae92e73d035cccbddbecc754f0ccc08a5}} 
+\index{finite\_scheme@{finite\_scheme}!finite\_scheme@{finite\_scheme}}
+\index{finite\_scheme@{finite\_scheme}!finite\_scheme@{finite\_scheme}}
+\doxysubsubsection{finite\_scheme()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily finite\+\_\+scheme\+::finite\+\_\+scheme (\begin{DoxyParamCaption}\item[{double}]{delta\+\_\+x }\end{DoxyParamCaption})}
+
+delta\+\_\+x constructor. Initialise finite scheme with a given delta X 
+
+Definition at line 6 of file finite\+\_\+scheme.\+cpp.
+
+\mbox{\label{classfinite__scheme_ace7e28584a2ba97cd78b2551880109ab}} 
+\index{finite\_scheme@{finite\_scheme}!````~finite\_scheme@{$\sim$finite\_scheme}}
+\index{````~finite\_scheme@{$\sim$finite\_scheme}!finite\_scheme@{finite\_scheme}}
+\doxysubsubsection{$\sim$finite\_scheme()}
+{\footnotesize\ttfamily finite\+\_\+scheme\+::$\sim$finite\+\_\+scheme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 26 of file finite\+\_\+scheme.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{classfinite__scheme_a83147fdf2b7aa9fa55a9fcfc098b9875}} 
+\index{finite\_scheme@{finite\_scheme}!calc\_l1@{calc\_l1}}
+\index{calc\_l1@{calc\_l1}!finite\_scheme@{finite\_scheme}}
+\doxysubsubsection{calc\_l1()}
+{\footnotesize\ttfamily double finite\+\_\+scheme\+::calc\+\_\+l1 (\begin{DoxyParamCaption}\item[{vector$<$ double $>$}]{in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 58 of file finite\+\_\+scheme.\+cpp.
+
+\mbox{\label{classfinite__scheme_a6ffd1d8dc077297c15fe21ffe1bfcd39}} 
+\index{finite\_scheme@{finite\_scheme}!calc\_l2@{calc\_l2}}
+\index{calc\_l2@{calc\_l2}!finite\_scheme@{finite\_scheme}}
+\doxysubsubsection{calc\_l2()}
+{\footnotesize\ttfamily double finite\+\_\+scheme\+::calc\+\_\+l2 (\begin{DoxyParamCaption}\item[{vector$<$ double $>$}]{in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 63 of file finite\+\_\+scheme.\+cpp.
+
+\mbox{\label{classfinite__scheme_a816c2776c9576462b3195107c826572d}} 
+\index{finite\_scheme@{finite\_scheme}!calc\_lmax@{calc\_lmax}}
+\index{calc\_lmax@{calc\_lmax}!finite\_scheme@{finite\_scheme}}
+\doxysubsubsection{calc\_lmax()}
+{\footnotesize\ttfamily double finite\+\_\+scheme\+::calc\+\_\+lmax (\begin{DoxyParamCaption}\item[{vector$<$ double $>$}]{in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Normal protected method that returns a double. It returns L1 norm of vector \begin{DoxySeeAlso}{See also}
+two\+\_\+norm()const 
+
+uniform\+\_\+norm()const 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+double. vectors L1 norm 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file finite\+\_\+scheme.\+cpp.
+
+\mbox{\label{classfinite__scheme_ab010fc1cfe322a592ff242d7d615e1af}} 
+\index{finite\_scheme@{finite\_scheme}!f@{f}}
+\index{f@{f}!finite\_scheme@{finite\_scheme}}
+\doxysubsubsection{f()}
+{\footnotesize\ttfamily double finite\+\_\+scheme\+::f (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 73 of file finite\+\_\+scheme.\+cpp.
+
+\mbox{\label{classfinite__scheme_a08334bd8dcf5af7d57e9319e5339eb57}} 
+\index{finite\_scheme@{finite\_scheme}!f\_prime\_x@{f\_prime\_x}}
+\index{f\_prime\_x@{f\_prime\_x}!finite\_scheme@{finite\_scheme}}
+\doxysubsubsection{f\_prime\_x()}
+{\footnotesize\ttfamily virtual double finite\+\_\+scheme\+::f\+\_\+prime\+\_\+x (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 94 of file finite\+\_\+scheme.\+h.
+
+\mbox{\label{classfinite__scheme_acc61f89ecebce11a96ecf1e5ff302c7c}} 
+\index{finite\_scheme@{finite\_scheme}!get\_l1@{get\_l1}}
+\index{get\_l1@{get\_l1}!finite\_scheme@{finite\_scheme}}
+\doxysubsubsection{get\_l1()}
+{\footnotesize\ttfamily double finite\+\_\+scheme\+::get\+\_\+l1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 35 of file finite\+\_\+scheme.\+cpp.
+
+\mbox{\label{classfinite__scheme_a9c2bdb78e3b0529bfdc8a82baf451c17}} 
+\index{finite\_scheme@{finite\_scheme}!get\_l2@{get\_l2}}
+\index{get\_l2@{get\_l2}!finite\_scheme@{finite\_scheme}}
+\doxysubsubsection{get\_l2()}
+{\footnotesize\ttfamily double finite\+\_\+scheme\+::get\+\_\+l2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 40 of file finite\+\_\+scheme.\+cpp.
+
+\mbox{\label{classfinite__scheme_a789b4d60ed503134f70a46d5fc8c76b3}} 
+\index{finite\_scheme@{finite\_scheme}!get\_lmax@{get\_lmax}}
+\index{get\_lmax@{get\_lmax}!finite\_scheme@{finite\_scheme}}
+\doxysubsubsection{get\_lmax()}
+{\footnotesize\ttfamily double finite\+\_\+scheme\+::get\+\_\+lmax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Normal get method that returns integer, the size of the vector \begin{DoxyReturn}{Returns}
+int. the size of the vector 
+\end{DoxyReturn}
+
+
+Definition at line 30 of file finite\+\_\+scheme.\+cpp.
+
+\mbox{\label{classfinite__scheme_acd2a7427c2c11e18a12d319e84190b66}} 
+\index{finite\_scheme@{finite\_scheme}!get\_name@{get\_name}}
+\index{get\_name@{get\_name}!finite\_scheme@{finite\_scheme}}
+\doxysubsubsection{get\_name()}
+{\footnotesize\ttfamily virtual string finite\+\_\+scheme\+::get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \textbf{ center\+\_\+scheme} \doxyref{}{p.}{classcenter__scheme_a5bdafa2affd9dc9ad6357ff40475c9c4}, and \textbf{ forward\+\_\+scheme} \doxyref{}{p.}{classforward__scheme_aeca4c1a6e4ccbf1788518b1f67168de2}.
+
+
+
+Definition at line 71 of file finite\+\_\+scheme.\+h.
+
+\mbox{\label{classfinite__scheme_ab14ceca14097b2e9628ac68def037d6a}} 
+\index{finite\_scheme@{finite\_scheme}!scheme@{scheme}}
+\index{scheme@{scheme}!finite\_scheme@{finite\_scheme}}
+\doxysubsubsection{scheme()}
+{\footnotesize\ttfamily vector$<$ double $>$ finite\+\_\+scheme\+::scheme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 75 of file finite\+\_\+scheme.\+cpp.
+
+\mbox{\label{classfinite__scheme_ab14c23b09ceada1279be751f53ebb13c}} 
+\index{finite\_scheme@{finite\_scheme}!scheme\_function@{scheme\_function}}
+\index{scheme\_function@{scheme\_function}!finite\_scheme@{finite\_scheme}}
+\doxysubsubsection{scheme\_function()}
+{\footnotesize\ttfamily double finite\+\_\+scheme\+::scheme\+\_\+function (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{delta\+\_\+x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \textbf{ center\+\_\+scheme} \doxyref{}{p.}{classcenter__scheme_a0dc5a95cebc5b847110629b8ea2a892a}, and \textbf{ forward\+\_\+scheme} \doxyref{}{p.}{classforward__scheme_ae15ba025024bea22eb757572ce2e37d7}.
+
+
+
+Definition at line 93 of file finite\+\_\+scheme.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\label{classfinite__scheme_aaf622fa300d36f8b3e1ca4737ea5e8f0}} 
+\index{finite\_scheme@{finite\_scheme}!delta\_x@{delta\_x}}
+\index{delta\_x@{delta\_x}!finite\_scheme@{finite\_scheme}}
+\doxysubsubsection{delta\_x}
+{\footnotesize\ttfamily double finite\+\_\+scheme\+::delta\+\_\+x = 0.\+1}
+
+
+
+Definition at line 30 of file finite\+\_\+scheme.\+h.
+
+\mbox{\label{classfinite__scheme_a8a772c378ef7f9bcb137d14f4a409505}} 
+\index{finite\_scheme@{finite\_scheme}!discreet\_value@{discreet\_value}}
+\index{discreet\_value@{discreet\_value}!finite\_scheme@{finite\_scheme}}
+\doxysubsubsection{discreet\_value}
+{\footnotesize\ttfamily double finite\+\_\+scheme\+::discreet\+\_\+value}
+
+
+
+Definition at line 32 of file finite\+\_\+scheme.\+h.
+
+\mbox{\label{classfinite__scheme_a23b975cd7888b23caa9f452387b12bf7}} 
+\index{finite\_scheme@{finite\_scheme}!discreet\_values@{discreet\_values}}
+\index{discreet\_values@{discreet\_values}!finite\_scheme@{finite\_scheme}}
+\doxysubsubsection{discreet\_values}
+{\footnotesize\ttfamily vector$<$double$>$ finite\+\_\+scheme\+::discreet\+\_\+values}
+
+
+
+Definition at line 34 of file finite\+\_\+scheme.\+h.
+
+\mbox{\label{classfinite__scheme_a1e745c63d4447cc8fde5d288bacc1bba}} 
+\index{finite\_scheme@{finite\_scheme}!error@{error}}
+\index{error@{error}!finite\_scheme@{finite\_scheme}}
+\doxysubsubsection{error}
+{\footnotesize\ttfamily double finite\+\_\+scheme\+::error}
+
+
+
+Definition at line 31 of file finite\+\_\+scheme.\+h.
+
+\mbox{\label{classfinite__scheme_a39e7338f84827b0463ab2938c98c3c30}} 
+\index{finite\_scheme@{finite\_scheme}!error\_v@{error\_v}}
+\index{error\_v@{error\_v}!finite\_scheme@{finite\_scheme}}
+\doxysubsubsection{error\_v}
+{\footnotesize\ttfamily vector$<$double$>$ finite\+\_\+scheme\+::error\+\_\+v}
+
+
+
+Definition at line 33 of file finite\+\_\+scheme.\+h.
+
+\mbox{\label{classfinite__scheme_acbb07acd43dc5f2e54faa41a3d5da1fd}} 
+\index{finite\_scheme@{finite\_scheme}!in@{in}}
+\index{in@{in}!finite\_scheme@{finite\_scheme}}
+\doxysubsubsection{in}
+{\footnotesize\ttfamily vector$<$double$>$ finite\+\_\+scheme\+::in}
+
+
+
+Definition at line 35 of file finite\+\_\+scheme.\+h.
+
+\mbox{\label{classfinite__scheme_aa1f425daa31a21dc790a87e6748ad604}} 
+\index{finite\_scheme@{finite\_scheme}!l1@{l1}}
+\index{l1@{l1}!finite\_scheme@{finite\_scheme}}
+\doxysubsubsection{l1}
+{\footnotesize\ttfamily double finite\+\_\+scheme\+::l1}
+
+
+
+Definition at line 28 of file finite\+\_\+scheme.\+h.
+
+\mbox{\label{classfinite__scheme_ac959975836859775f5d9b78e3f30a233}} 
+\index{finite\_scheme@{finite\_scheme}!l2@{l2}}
+\index{l2@{l2}!finite\_scheme@{finite\_scheme}}
+\doxysubsubsection{l2}
+{\footnotesize\ttfamily double finite\+\_\+scheme\+::l2}
+
+
+
+Definition at line 27 of file finite\+\_\+scheme.\+h.
+
+\mbox{\label{classfinite__scheme_a82b4bc7d2ea5618f6004ba332edba99d}} 
+\index{finite\_scheme@{finite\_scheme}!lmax@{lmax}}
+\index{lmax@{lmax}!finite\_scheme@{finite\_scheme}}
+\doxysubsubsection{lmax}
+{\footnotesize\ttfamily double finite\+\_\+scheme\+::lmax}
+
+
+
+Definition at line 26 of file finite\+\_\+scheme.\+h.
+
+\mbox{\label{classfinite__scheme_a11edf93594a620eab1e6447e5f573992}} 
+\index{finite\_scheme@{finite\_scheme}!name@{name}}
+\index{name@{name}!finite\_scheme@{finite\_scheme}}
+\doxysubsubsection{name}
+{\footnotesize\ttfamily string finite\+\_\+scheme\+::name = \char`\"{}finite Scheme\char`\"{}}
+
+
+
+Definition at line 25 of file finite\+\_\+scheme.\+h.
+
+\mbox{\label{classfinite__scheme_ae1ea80eeb93e3912e1c2f5f04d9e54a9}} 
+\index{finite\_scheme@{finite\_scheme}!x@{x}}
+\index{x@{x}!finite\_scheme@{finite\_scheme}}
+\doxysubsubsection{x}
+{\footnotesize\ttfamily double finite\+\_\+scheme\+::x = 0}
+
+
+
+Definition at line 29 of file finite\+\_\+scheme.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Josh/source/\+Cranfield2/\textbf{ finite\+\_\+scheme.\+h}\item 
+C\+:/\+Users/\+Josh/source/\+Cranfield2/\textbf{ finite\+\_\+scheme.\+cpp}\end{DoxyCompactItemize}

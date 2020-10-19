@@ -2,6 +2,7 @@
 
 
 
+
 finite_scheme::finite_scheme(double delta_x){
 
 	discreet_value = 0.0;
