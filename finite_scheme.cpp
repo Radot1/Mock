@@ -1,7 +1,8 @@
 #include <iomanip>
 #include "finite_scheme.h"
 
-
+ofstream outputFile;
+ofstream fs;
 
 
 finite_scheme::finite_scheme(double delta_x){
@@ -109,6 +110,20 @@ void forward_scheme::print()
 			
 }
 
+
+void forward_scheme::output()
+{
+	fs.open("ForwardData.csv");
+
+	fs << "x     ,  " << "delta_x   ,  " << "f_prime_x     , " << "Forward error  ,  " << "discreet value" << endl;
+	for (int i = 0; i < error_v.size(); i++) {
+		fs << delta_x * (i) << " ," << delta_x << "    ,      " << f_prime_x(delta_x * (i)) << "      ,   " << error_v[i] << "  ,      " << discreet_values[i] << endl;
+
+	}
+	fs.close();
+
+}
+
 double forward_scheme::scheme_function(double x, double delta_x){ return (f(x + delta_x) - f(x)) / delta_x; }
 
 
@@ -138,6 +153,20 @@ void center_scheme::print()
 
 
 }
+
+void center_scheme::output()
+{
+	fs.open("CentreData.csv");
+
+	fs << "x     ,  " << "delta_x   ,  " << "f_prime_x     , " << "Centre error  ,  " << "discreet value" << endl;
+	for (int i = 0; i < error_v.size(); i++) {
+		fs << delta_x * (i) << " ," << delta_x << "    ,      " << f_prime_x(delta_x * (i)) << "      ,   " << error_v[i] << "  ,      " << discreet_values[i] << endl;
+
+	}
+
+	fs.close();
+}
+
 
 double center_scheme::scheme_function(double x, double delta_x) { return ((f(x + delta_x) - f(x - delta_x)) / delta_x) * 0.5; };
 

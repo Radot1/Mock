@@ -4,6 +4,9 @@ using namespace std;
 #include<iostream>
 #include<string>
 #include<cmath>
+#include <fstream>
+
+
 
 
 /**
@@ -133,6 +136,7 @@ class forward_scheme : public finite_scheme{
 		forward_scheme() {};
 		virtual string get_name() { return this->name; };
 		virtual void print();
+		virtual void output();
 
 protected:
 
@@ -166,6 +170,7 @@ public:
 	center_scheme();
 	virtual string get_name() { return this->name; };
 	virtual void print();
+	virtual void output();
 
 protected:
 	virtual double scheme_function(double x, double delta_x);
