@@ -130,6 +130,7 @@ class forward_scheme : public finite_scheme{
 
 	public:
 		forward_scheme(double delta_x);
+		forward_scheme() {};
 		virtual string get_name() { return this->name; };
 		virtual void print();
 
@@ -162,6 +163,7 @@ class center_scheme : public finite_scheme {
 
 public:
 	center_scheme(double delta_x);
+	center_scheme();
 	virtual string get_name() { return this->name; };
 	virtual void print();
 

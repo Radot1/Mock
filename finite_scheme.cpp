@@ -98,7 +98,7 @@ forward_scheme::forward_scheme(double a)
 
 void forward_scheme::print()
 {
-		cout << fixed << setprecision(2);
+		cout << fixed << setprecision(5);
 		cout << this->get_name() << " For dx = " << delta_x << endl;
 		cout << "x     |  " << "delta_x   |  " << "f_prime_x     |  " << "error  |  " << "discreet value" << endl;
 	for (int i = 0; i < error_v.size();i++){
@@ -122,9 +122,13 @@ center_scheme::center_scheme(double a)
 
 }
 
+center_scheme::center_scheme()
+{
+}
+
 void center_scheme::print()
 {
-	cout << fixed << setprecision(2);
+	cout << fixed << setprecision(5);
 	cout << this->get_name() << " For dx = " << delta_x << endl;
 	cout << "x     |  " << "delta_x   |  " << "f_prime_x     |  " << "error  |  " << "discreet value" << endl;
 	for (int i = 0; i < error_v.size(); i++) {

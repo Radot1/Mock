@@ -10,61 +10,32 @@ using namespace std;
 
 
 
-//  typedef double (*func_ptr)(double u, double t); try to use typdef for passing in lambda as arg.
-// create a name for the file output
-
 
 
 int main()
 
-// for purposes of demonstration, an interactive loop is included that lets you choose a scheme, a delta x value, and the
-// choice to print your file to the screen or a csv;
 
 {
-	int c;
-	double dx;
-	int print;
-	finite_scheme scheme;
-
-	do
-	{
-		cout << "Choose scheme 1. forward difference 2. Central  3 to exit" << endl;
-		cin >> c;
-		if (c == 3) { break; }
-		cout << "Choose delta x" << endl;
-		cin >> dx;
-		cout << "Choose scheme 1. Print to Screen 2. Print to file" << endl;
-		cin >> print;
-
-		switch (c) {
-		case 1:
-			scheme = forward_scheme(dx);
-			scheme.print();
-			break;
-		case 2:
-			scheme = center_scheme(dx);
-			break;
-		default:
-			break;
-
-		}
-
-		switch (print) {
-		case 1:
-			scheme.print();
-			break;
-		case 2:
-			break;
-		default:
-			break;
-
-		}
-
-
-
-
-	} while (true);
 	
+	forward_scheme fd_01 = forward_scheme(0.01);
+	center_scheme cd_01 = center_scheme(0.01);
+
+	fd_01.print();
+	cout << fixed << setprecision(10);
+	cout << "\n l2 norm= " << fd_01.get_l2();
+	cout << "\n lmax norm= " << fd_01.get_lmax();
+
+	cd_01.print();
+	cout << fixed << setprecision(10);
+	cout << "\n l2 norm= " << cd_01.get_l2();
+	cout << "\n lmax norm= " << cd_01.get_lmax();
+
+
+
+
+
+
+
 
 
   return 0;
