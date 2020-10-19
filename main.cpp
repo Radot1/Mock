@@ -39,6 +39,7 @@ int main()
 		switch (c) {
 		case 1:
 			scheme = forward_scheme(dx);
+			scheme.print();
 			break;
 		case 2:
 			scheme = center_scheme(dx);
@@ -50,6 +51,7 @@ int main()
 
 		switch (print) {
 		case 1:
+			scheme.print();
 			break;
 		case 2:
 			break;
